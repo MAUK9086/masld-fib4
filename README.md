@@ -113,10 +113,13 @@ config/
   config.yaml             # All paths, thresholds, model settings
 ```
 
-## Key Findings (populated after analysis run)
+## Key Findings
 
-- FIB-4 false negative rate: **[TBD]%** of low-risk patients
-- Number of distinct phenotype clusters: **[TBD]**
-- LLM-SHAP concordance: **[TBD]%**
-- FIB-4 Plus AUROC improvement: **[TBD]**
-- Asian American false negative rate: **[TBD]x** overall rate
+From the APASL STC 2026 abstract and the result files named below.
+
+- **FIB-4 misses:** 1,390 of 1,998 MASLD-eligible adults (70%) were FIB-4 low risk (< 1.30). 16.6% of them (95% CI 13.5–20.0%) had F2+ fibrosis on elastography (LSM ≥ 8.0 kPa).
+- **BMI and diabetes:** the false-negative rate rose from 5.1% at BMI < 25 to 15.5% at 30–40 and 37.7% at ≥ 40 kg/m² (`results/exp12`). It was 29.8% in people with diabetes vs 11.8% without.
+- **Phenotypes:** two clusters. Severely obese metabolic (n = 89; BMI 46.1, 67% female, LSM 10.5 kPa) and dyslipidaemic metabolic (n = 131; BMI 35.3, 76% male, 44% diabetic, triglycerides 168 mg/dL).
+- **FIB-4 Plus:** HSI + waist circumference + BMI reached AUROC 0.837 (0.773–0.898) in the low-risk stratum, vs 0.749 for NFS (DeLong p = 0.019; NRI 9.2%) (`results/exp09`).
+- **LLM–SHAP concordance:** Qwen2.5-32B phenotype descriptions named 60% and 100% of the top-5 SHAP features for the two clusters (`results/exp07`).
+- **Asian-specific BMI cut-off:** using BMI ≥ 23 instead of ≥ 25 adds 39 Asian American adults to the 200 MASLD-eligible under the standard definition (`results/exp08`).
