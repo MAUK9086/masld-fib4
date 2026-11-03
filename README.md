@@ -20,9 +20,8 @@ Among MASLD patients classified as "low risk" by FIB-4 (< 1.30), 16.6% have sign
 ## Quickstart
 
 ```bash
-git clone https://github.com/MAUK9086/malsd_fib4.git
-cd malsd_fib4
-git checkout v1
+git clone https://github.com/MAUK9086/masld-fib4.git
+cd masld-fib4
 
 # 1. Set up environment (builds llama-cpp-python for CUDA 12.8)
 chmod +x setup.sh
